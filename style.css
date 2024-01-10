@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-des-blue: hsl(224, 23%, 55%);
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  min-height: 100vh;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--clr-pale-blue);
+  position: relative;
+  font-size: 16px;
+}
+a {
+  cursor: pointer;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+  background-color: white;
+  border-radius: 3vh;
+  overflow: hidden;
+}
+.text-content {
+  padding: 10%;
+  text-align: center;
+}
+.title {
+  color: var(--clr-dark-blue);
+  font-weight: 900;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: grey;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+.plan-box {
+  background-color: var(--clr-very-pale-blue);
+  border-radius: 12px;
+  display: flex;
+  padding: 10px 25px;
+  align-items: center;
+  justify-content: space-between;
+}
+.plan-box-left {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.plan-box-left div {
+  margin-left: 20px;
+  padding: 10px;
+}
+.plan-box-left div h5 {
+  font-weight: 900;
+  font-size: 15px;
+  color: var(--clr-dark-blue);
+}
+.plan-box-left div p {
+  font-size: 14px;
+  color: gray;
+  opacity: 0.8;
+}
+
+.plan-box a {
+  font-weight: 900;
+  color: var(--clr-dark-blue);
+}
+.plan-box a:hover,
+.plan-box a:focus {
+  text-decoration: none;
+  color: var(--clr-bright-blue);
+  transition: color 250ms ease;
+}
+
+a.proceed-btn {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: var(--clr-bright-blue);
+  padding: 20px 0;
+  border-radius: 12px;
+  margin: 30px 0;
+}
+a.proceed-btn:hover,
+a.proceed-btn:focus {
+  background-color: var(--clr-des-blue);
+}
+
+a.cancel-btn {
+  display: block;
+  text-decoration: none;
+  color: var(--clr-des-blue);
+  border-radius: 12px;
+}
+a.cancel-btn:hover,
+a.cancel-btn:focus {
+  color: var(--clr-dark-blue);
+}
+
+@media (max-width: 40em) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+    font-size: 14px;
+  }
+  .container {
+    max-width: 88%;
+  }
+  .title {
+    font-size: 23px;
+  }
+
+  div.plan-box {
+    padding: 12px;
+  }
+  .plan-box-left div {
+    margin-left: 10px;
+  }
+  a.proceed-btn,
+  a.cancel-btn,
+  .plan-box a {
+    font-size: 13px;
+  }
+  .text-content {
+    padding: 9% 7%;
+  }
+}
